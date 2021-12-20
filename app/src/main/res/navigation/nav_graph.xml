@@ -15,7 +15,7 @@
             app:popUpTo="@id/permissionFragment"
             app:popUpToInclusive="true" />
     </fragment>
-    <fragment
+      <dialog
         android:id="@+id/resultFragment"
         android:name="com.edushareteam.mydistancetrackerapp.ResultFragment"
         android:label="fragment_result"
@@ -25,7 +25,11 @@
             app:destination="@id/mapsFragment2"
             app:popUpTo="@id/mapsFragment2"
             app:popUpToInclusive="true" />
-    </fragment>
+        <argument
+            android:name="result"
+            app:argType="com.edushareteam.mydistancetrackerapp.model.Result" />
+
+         </dialog>
     <fragment
         android:id="@+id/mapsFragment2"
         android:name="com.edushareteam.mydistancetrackerapp.MapsFragment"
